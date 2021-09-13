@@ -1,5 +1,5 @@
 {% set name = "opencadd" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/volkamerlab/{{ name|lower }}/archive/v{{ version }}.tar.gz
-  sha256: b4fcdc8f9e734d9e676b8177675652789ba1457abaca588e2ddf3ee8e6964aaf
+  sha256: f86494f94e31896be8634c611d3ab099893d38ac347a8263da8ee9c7c6439dc1
 
 build:
   noarch: python
@@ -30,8 +30,9 @@ requirements:
     - tqdm
     - biotite
     - biopython <=1.77
-    - mmligner
-    - theseus
+    # Not available under Windows yet
+    #- mmligner
+    #- theseus
 
 test:
   imports:
