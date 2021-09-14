@@ -1,5 +1,5 @@
 {% set name = "opencadd" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/volkamerlab/{{ name|lower }}/archive/v{{ version }}.tar.gz
-  sha256: f86494f94e31896be8634c611d3ab099893d38ac347a8263da8ee9c7c6439dc1
+  sha256: bd512c485f41496cd1f73f5fa2a98ce90cde525a080c1df25bdf63a2e073ae11
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -43,7 +43,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A Python library for structural cheminformatics'
+  summary: A Python library for structural cheminformatics
   description: |
     A Python library for structural cheminformatics
   doc_url: https://opencadd.readthedocs.io/en/latest
@@ -51,5 +51,5 @@ about:
 
 extra:
   recipe-maintainers:
-  - dominiquesydow
-  - jaimergp
+    - dominiquesydow
+    - jaimergp
