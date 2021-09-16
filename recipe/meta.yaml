@@ -1,5 +1,5 @@
 {% set name = "opencadd" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/volkamerlab/{{ name|lower }}/archive/v{{ version }}.tar.gz
-  sha256: f414d4efd76e4521bfe9be26d5c08b80574229ca44a6bde4fa4c34066c071982
+  sha256: e6d166fd204116112a09fbd4f41a0db0da620e5bd80dc8b49fa7fe8ff542e848
 
 build:
   noarch: python
