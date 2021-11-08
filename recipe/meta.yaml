@@ -1,5 +1,5 @@
 {% set name = "opencadd" %}
-{% set version = "0.2.2" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/volkamerlab/{{ name|lower }}/archive/v{{ version }}.tar.gz
-  sha256: e6d166fd204116112a09fbd4f41a0db0da620e5bd80dc8b49fa7fe8ff542e848
+  sha256: 13400642eb944c56a91168b22f7c78d36dd1f6cdcc11c9b3e8d39c50f884cc65
 
 build:
   noarch: python
@@ -25,6 +25,7 @@ requirements:
     - matplotlib-base
     - mdanalysis
     - nglview
+    - jsonschema <4.0.0
     - bravado
     - biopandas
     - rdkit
